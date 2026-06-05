@@ -25,7 +25,7 @@ EventBridge (hourly) → Lambda (Python) → OpenWeatherMap API → S3 → SES E
 ![Lambda](images/lambda.png)
 
 ### EventBridge Schedule
-![EventBridge](images/eventbridge.png)
+![EventBridge](images/EventBridge.png)
 
 ### Python Code
 ![Code](images/code.png)
@@ -34,7 +34,7 @@ EventBridge (hourly) → Lambda (Python) → OpenWeatherMap API → S3 → SES E
 ![S3](images/s3.png)
 
 ### IAM Role
-![IAM](images/iam.png)
+![IAM](images/IAM.png)
 
 ### OpenWeatherMap API
 ![OpenWeatherMap](images/openweather.png)
