@@ -130,7 +130,6 @@ SES Console → Verified Identities → Create Identity → Email
 ```text
 AWS Weather Data Pipeline
 ├── lambda_function.py
-├── main.py
 ├── README.md
 └── images
     ├── lambda.png
