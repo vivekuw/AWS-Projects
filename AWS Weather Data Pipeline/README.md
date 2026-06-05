@@ -66,26 +66,26 @@ weather-pipeline-bucket/
 ## 🛠️ Setup Guide
 
 ### 1. Prerequisites
-- AWS account (free tier)
-- OpenWeatherMap free API key → [openweathermap.org](https://openweathermap.org)
-- Python 3.12
+-- AWS account (free tier)
+-- OpenWeatherMap free API key → [openweathermap.org](https://openweathermap.org)
+-- Python 3.12
 
 ### 2. Store API Key in SSM
 
-AWS Console → Systems Manager → Parameter Store → Create parameter
-Name  : /weather-pipeline/api-key
-Type  : SecureString
-Value : your_api_key
+-- AWS Console → Systems Manager → Parameter Store → Create parameter
+-- Name  : /weather-pipeline/api-key
+-- Type  : SecureString
+-- Value : your_api_key
 
 ### 3. Create S3 Bucket
 
-Name   : weather-pipeline-vivek
-Region : us-east-1
-Access : private (block all public)
+-- Name   : weather-pipeline-vivek
+-- Region : us-east-1
+-- Access : private (block all public)
 
 ### 4. Create IAM Role
 
-Name     : weather-lambda-role
+-- Name     : weather-lambda-role
 Policies : AmazonS3FullAccess
 CloudWatchLogsFullAccess
 AmazonSSMReadOnlyAccess
@@ -121,17 +121,17 @@ SES Console → Verified Identities → Create Identity → Email
 | SSM | 720 reads/month | 10,000/month |
 
 ## 🗂️ Project Structure
-weather-pipeline/
-├── lambda_function.py   # main Lambda code
-├── README.md
-└── images/
-├── lambda.png
-├── eventbridge.png
-├── code.png
-├── s3.png
-├── iam.png
-├── openweather.png
-└── email.png
+ weather-pipeline/
+ ├── lambda_function.py   # main Lambda code
+ ├── README.md
+ └── images/
+ ├── lambda.png
+ ├── eventbridge.png
+ ├── code.png
+ ├── s3.png
+ ├── iam.png
+ ├── openweather.png
+ └── email.png
 
 ## 🔗 Skills Demonstrated
 
