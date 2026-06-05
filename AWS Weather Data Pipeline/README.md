@@ -43,14 +43,19 @@ EventBridge (hourly) → Lambda (Python) → OpenWeatherMap API → S3 → SES E
 ![Email](images/email.png)
 
 ## 📁 S3 Data Structure
- weather-pipeline-bucket/
- └── weather/
- └── mumbai/
- └── 2026/
- └── 06/
- └── 05/
- ├── 00-00.json
- ├── 01-00.json
+
+```text
+weather-pipeline-bucket/
+└── weather/
+    └── mumbai/
+        └── 2026/
+            └── 06/
+                └── 05/
+                    ├── 00-00.json
+                    ├── 01-00.json
+                    ├── 02-00.json
+                    └── ...
+```
 
 ## 🌡️ Cities Tracked
 
@@ -120,18 +125,22 @@ SES Console → Verified Identities → Create Identity → Email
 | SES | 720 emails/month | 62,000/month |
 | SSM | 720 reads/month | 10,000/month |
 
-## 🗂️ Project Structure
- weather-pipeline/
- ├── lambda_function.py   # main Lambda code
- ├── README.md
- └── images/
- ├── lambda.png
- ├── eventbridge.png
- ├── code.png
- ├── s3.png
- ├── iam.png
- ├── openweather.png
- └── email.png
+## 📁 Project Structure
+
+```text
+AWS Weather Data Pipeline
+├── lambda_function.py
+├── main.py
+├── README.md
+└── images
+    ├── lambda.png
+    ├── eventbridge.png
+    ├── s3.png
+    ├── iam.png
+    ├── openweather.png
+    ├── email.png
+    └── code.png
+```
 
 ## 🔗 Skills Demonstrated
 
