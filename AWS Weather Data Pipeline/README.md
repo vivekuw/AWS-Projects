@@ -43,14 +43,14 @@ EventBridge (hourly) → Lambda (Python) → OpenWeatherMap API → S3 → SES E
 ![Email](images/email.png)
 
 ## 📁 S3 Data Structure
-weather-pipeline-bucket/
-└── weather/
-└── mumbai/
-└── 2026/
-└── 06/
-└── 05/
-├── 00-00.json
-├── 01-00.json
+ weather-pipeline-bucket/
+ └── weather/
+ └── mumbai/
+ └── 2026/
+ └── 06/
+ └── 05/
+ ├── 00-00.json
+ ├── 01-00.json
 
 ## 🌡️ Cities Tracked
 
@@ -67,42 +67,42 @@ weather-pipeline-bucket/
 
 ### 1. Prerequisites
 -- AWS account (free tier)
--- OpenWeatherMap free API key → [openweathermap.org](https://openweathermap.org)
--- Python 3.12
+→ OpenWeatherMap free API key → [openweathermap.org](https://openweathermap.org)
+→ Python 3.12
 
 ### 2. Store API Key in SSM
 
--- AWS Console → Systems Manager → Parameter Store → Create parameter
--- Name  : /weather-pipeline/api-key
--- Type  : SecureString
--- Value : your_api_key
+ AWS Console → Systems Manager → Parameter Store → Create parameter
+→ Name  : /weather-pipeline/api-key
+→ Type  : SecureString
+→ Value : your_api_key
 
 ### 3. Create S3 Bucket
 
--- Name   : weather-pipeline-vivek
--- Region : us-east-1
--- Access : private (block all public)
+Name   : weather-pipeline-vivek
+→ Region : us-east-1
+→ Access : private (block all public)
 
 ### 4. Create IAM Role
 
--- Name     : weather-lambda-role
-Policies : AmazonS3FullAccess
-CloudWatchLogsFullAccess
-AmazonSSMReadOnlyAccess
-AmazonSESFullAccess
+Name     : weather-lambda-role
+→ Policies : AmazonS3FullAccess
+→ CloudWatchLogsFullAccess
+→ AmazonSSMReadOnlyAccess
+→ AmazonSESFullAccess
 
 ### 5. Deploy Lambda
 
 Runtime : Python 3.12
-Timeout : 30 seconds
-Memory  : 128 MB
-Role    : weather-lambda-role
+→ Timeout : 30 seconds
+→ Memory  : 128 MB
+→ Role    : weather-lambda-role
 
 ### 6. Set EventBridge Rule
 
 Rule type : Schedule
-Rate      : 1 hour
-Target    : weather-ingestion Lambda
+→ Rate      : 1 hour
+→ Target    : weather-ingestion Lambda
 
 ### 7. Verify Email in SES
 SES Console → Verified Identities → Create Identity → Email
