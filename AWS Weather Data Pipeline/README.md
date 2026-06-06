@@ -64,7 +64,6 @@ weather-pipeline-bucket/
 - Bangalore
 - Chennai
 
-## 📧 Sample Email Output
 
 
 
